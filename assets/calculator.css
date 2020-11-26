@@ -9,6 +9,15 @@ body {
     width: 100%;
 }
 
+.btn {
+    border: 1px grey solid;
+    border-radius: 0;
+}
+.btn__example {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+
 /*
 Kell:
 keretek színe: középszürke, 0,7-ös alpha
