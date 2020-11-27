@@ -32,9 +32,11 @@ let a = parseInt(teststring);
 console.log(a, a.length);
 
 
-function summation(a, b) {
-    return a + b
-}
+// function summation(a, b) {
+//     return a + b
+// }
+
+const summation = (a, b) => a + b;
 
 function subtraction(a, b) {
     return a - b
