@@ -9,13 +9,61 @@ body {
     width: 100%;
 }
 
+.calculator__main {
+    border: 1px lightgrey solid;
+    padding: .75rem;
+    height: 25%;
+    width: 25%;
+}
+
+.display__row {
+    display: flex;
+}
+
+.display {
+    flex: 100%;
+}
+
 .btn {
     border: 1px grey solid;
     border-radius: 0;
 }
-.btn__example {
+
+.operation__row {
+    display: flex;
+}
+
+.operation__row .btn {
+    flex: 25%;
+}
+
+.numberpad__main {
+    display: flex;
+}
+
+.numbers {
+    flex: 75%;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.numbers .btn {
+    flex: 33%;
+}
+
+.equal {
+    flex: 25%;
+    display: flex;
+    /*align-items: stretch;*/
+    /*align-content: stretch;*/
+}
+
+.btn__equal {
+    align-self: stretch; /* vagy a befoglaló div-jében 'align-item: stretch', viszont az minden elemre vonatkozik. */
     background-color: cornflowerblue;
     color: whitesmoke;
+    flex: 25%;
 }
 
 /*
