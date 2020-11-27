@@ -32,23 +32,15 @@ let a = parseInt(teststring);
 console.log(a, a.length);
 
 
-// function summation(a, b) {
-//     return a + b
-// }
-
+/* Mathematical functions */
 const summation = (a, b) => a + b;
 
-function subtraction(a, b) {
-    return a - b
-}
+const subtraction = (a, b) => a - b;
 
-function multiply(a, b) {
-    return a * b
-}
+const multiply = (a, b) => a * b;
 
-function division(a, b) {
-    return a / b
-}
+const division = (a, b) => a / b;
+
 
 const b = 12;
 console.log(summation(a, b));
