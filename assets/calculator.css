@@ -1,6 +1,7 @@
 /* Initial settings */
 :root {
     --calc-border: 1px lightgrey solid;
+    --bg-color-primary-blue: rgba(0, 102, 255, .8);
 }
 
 * {
@@ -72,19 +73,23 @@ body {
 
 .btn__equal {
     align-self: stretch; /* vagy a befoglaló div-jében 'align-item: stretch', viszont az minden elemre vonatkozik. */
-    background-color: cornflowerblue;
+    background-color: var(--bg-color-primary-blue);
     color: whitesmoke;
     flex: 25%;
 }
 
+/* .prim_test {
+    background-color: var(--bg-color-primary-blue);
+} */
+
 /*
 Kell:
-keretek színe: középszürke, 0,7-ös alpha
-gombok szövege mindkét tengelyen középre igazítva
-gombok háttérszíne:
+KÉSZ, DE MÁS keretek színe: középszürke, 0,7-ös alpha
+ALAP gombok szövege mindkét tengelyen középre igazítva
+KÉSZ gombok háttérszíne:
     normál: halványszürke
     műveleti: középszürke
     egyenlő: primary-kék
-Egyenlő gomb szöveg színe: fehér
-Egyenlő gomb 3 sornyira kinyújtva flexboxban
+KÉSZ Egyenlő gomb szöveg színe: fehér
+KÉSZ Egyenlő gomb 3 sornyira kinyújtva flexboxban
 */
