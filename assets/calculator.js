@@ -19,7 +19,7 @@ az elvégzett művelet eredménye lesz az 'i' reduce hatására
 Ha elfogytak a tömbök elemei, akkor a  'result' tömb értékét kiírjuk a kijelzőre:
 -- appendAdjecantHTML
 
-Függvények
+ALAKUL - Függvények
 sum(mmation) = a + b
 sub(traction) = a - b
 mul(tiply) = a * b
@@ -27,3 +27,29 @@ div(ision) = a / b
 
 */
 
+const teststring = '-36+25-45';
+let a = parseInt(teststring);
+console.log(a, a.length);
+
+
+function summation(a, b) {
+    return a + b
+}
+
+function subtraction(a, b) {
+    return a - b
+}
+
+function multiply(a, b) {
+    return a * b
+}
+
+function division(a, b) {
+    return a / b
+}
+
+const b = 12;
+console.log(summation(a, b));
+console.log(subtraction(a, b));
+console.log(multiply(a, b));
+console.log(division(a, b));
