@@ -19,7 +19,7 @@ az elvégzett művelet eredménye lesz az 'i' reduce hatására
 Ha elfogytak a tömbök elemei, akkor a  'result' tömb értékét kiírjuk a kijelzőre:
 -- appendAdjecantHTML
 
-ALAKUL - Függvények
+KÉSZ - Függvények
 sum(mmation) = a + b
 sub(traction) = a - b
 mul(tiply) = a * b
