@@ -16,7 +16,6 @@ body {
 }
 
 .calculator__main {
-    /* border: 1px lightgrey solid; */
     border: var(--calc-border);
     height: 25%;
     padding: .75rem;
@@ -36,7 +35,6 @@ body {
 
 .btn {
     border: var(--calc-border);
-    /* border: 1px grey solid; */
     border-radius: 0;
     margin: .2rem;
     padding: .5rem;
