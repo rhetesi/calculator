@@ -2,6 +2,8 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 550;
 }
 
 body {
@@ -22,11 +24,15 @@ body {
 
 .display {
     flex: 100%;
+    margin: .2rem;
+    padding: .5rem;
 }
 
 .btn {
     border: 1px grey solid;
     border-radius: 0;
+    margin: .2rem;
+    padding: .5rem;
 }
 
 .operation__row {
@@ -42,14 +48,14 @@ body {
 }
 
 .numbers {
+    display: flex;
     flex: 75%;
     flex-shrink: 1;
     flex-wrap: wrap;
-    display: flex;
 }
 
 .numbers .btn {
-    flex: 33%;
+    flex: 30%;
 }
 
 .equal {
