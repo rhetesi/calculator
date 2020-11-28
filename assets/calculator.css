@@ -1,7 +1,7 @@
 /* Initial settings */
 :root {
     --calc-border: 1px lightgrey solid;
-    --bg-color-primary-blue: rgba(0, 102, 255, .8);
+    --color-primary-blue: rgba(0, 102, 255, .8);
 }
 
 * {
@@ -21,6 +21,13 @@ body {
     height: 25%;
     padding: .75rem;
     width: 25%;
+}
+
+@media screen and (max-width: 700px) {
+    .calculator__main {
+        width: 98%;
+        height: 100%;
+    }
 }
 
 .display__row {
@@ -73,7 +80,7 @@ body {
 
 .btn__equal {
     align-self: stretch; /* vagy a befoglaló div-jében 'align-item: stretch', viszont az minden elemre vonatkozik. */
-    background-color: var(--bg-color-primary-blue);
+    background-color: var(--color-primary-blue);
     color: whitesmoke;
     flex: 25%;
 }

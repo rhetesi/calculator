@@ -42,19 +42,65 @@ const handleClick = () => {
 handleClick();
 */
 
+/*
+let inputNumber = []; 
+let signs = [];
+const makeNumbers = function () {
+        for (let i = 0; i < input.length; i++) {
+            if (typeof parseFloat(input[i]) === 'number') {
+                inputNumber.push(input[i]);
+            }else {
+                signs.push(input[i]);
+            }
+           return inputNumber;
+        }
+    }
+
+let numbersArray = [], operatorsArray = [];
+
+const numbersArray = (iputArray) => {
+    inputArray.map(item => typeof parseFloat(item) === 'number')
+}
+const operatorsArray = (inputArray) => {
+    inputArray.map(item => typeof parseFloat(item) === isNaN)
+}
+*/
+
 const testString = '-36+25-45';
-let a = parseInt(testString);
+let a = parseFloat(testString);
 console.log(a, a.length);
 
+
+
+/* Ezt kell átdolgozni a számokat és műveleti jeleket tartalamzó tömbökkel elvégzendő műveletekhez!!!
+1. Írj egy olyan függvény kifejezést, ami paraméterként vár egy egész számokat tartalmazó tömböt! (Input ellenőrzést nem kell végezni.)
+A függvény szorozza meg tömbelemek értékét 1.27-el, majd pedig térjen vissza az elemek összegével!
+
+
+const intArray = [100, 150, 234, 515, 627];
+
+//const taxedArray = intArray.map(item => item * 1.27);
+//console.log(taxedArray);
+//const taxedSum = taxedArray.reduce((previous, current) => previous + current);
+//console.log(taxedSum);
+
+const sumWithVAT = intArray.map(item => item * 1.27).reduce((prev, curr) => prev + curr);
+console.log('1. feladat - tömb eleminek szorzása meagadott értékkel és a szorzatok összeadása: ' + sumWithVAT);
+
+VALAMI ilyen kellene:
+
+const result = numbers.reduce(prev, curr) => operations tömb aktuális eleme szerinti műveli függvény
+meghívása prev és curr paraméterek átadásával, operations tömb index-ének növelése eggyel.
+* /
 
 /* Mathematical functions */
 const summation = (a = 0, b = 0) => a + b;
 
 const subtraction = (a = 0, b = 0) => a - b;
 
-const multiply = (a = 0, b = 0) => a * b;
+const multiply = (a = 1, b = 1) => a * b;
 
-const division = (a = 0, b = 0) => a / b;
+const division = (a = 0, b = 1) => a / b;
 
 
 const b = 12;
@@ -62,3 +108,9 @@ console.log(summation(a, b));
 console.log(subtraction(a, b));
 console.log(multiply(a, b));
 console.log(division(a, b));
+
+
+const testArray = [1, 2, 'alpha', 3, 15, 'beta', 4];
+
+const numArray = (arr) => arr.map(item => typeof item === 'number');
+console.log(numArray(testArray));
