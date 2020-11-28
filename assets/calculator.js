@@ -27,19 +27,34 @@ div(ision) = a / b
 
 */
 
-const teststring = '-36+25-45';
-let a = parseInt(teststring);
+
+/* Handling the click event on a button
+const handleClick = () => {
+    let buttons = document.querySelectorAll('.button');
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', () => {
+            //console.log(buttons[i].value);
+            console.log(buttons[i].innerHTML);
+        })
+    }
+}
+
+handleClick();
+*/
+
+const testString = '-36+25-45';
+let a = parseInt(testString);
 console.log(a, a.length);
 
 
 /* Mathematical functions */
-const summation = (a, b) => a + b;
+const summation = (a = 0, b = 0) => a + b;
 
-const subtraction = (a, b) => a - b;
+const subtraction = (a = 0, b = 0) => a - b;
 
-const multiply = (a, b) => a * b;
+const multiply = (a = 0, b = 0) => a * b;
 
-const division = (a, b) => a / b;
+const division = (a = 0, b = 0) => a / b;
 
 
 const b = 12;
