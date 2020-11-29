@@ -151,12 +151,16 @@ console.log(numArray(testArray)); */
 
 const testString = '2369+458-12*5/6';
 
-const testNumbersArray = [];
+
 const regExpNum = /\d+/g;
-const testOperatorsArray = [];
+
 const regExpOp = /\D/g;
-console.log(testString.match(regExpNum));
-console.log(testString.match(regExpOp));
+//console.log(testString.match(regExpNum));
+//console.log(testString.match(regExpOp));
+const testNumbersArray = testString.match(regExpNum);
+const testOperatorsArray = testString.match(regExpOp);
+console.log(testNumbersArray);
+console.log(testOperatorsArray);
 
 /*
 Milyen jó a regular expressions használata
