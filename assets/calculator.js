@@ -28,7 +28,8 @@ div(ision) = a / b
 */
 
 let inputString = '';
-const displayInitContent = document.querySelector('.display').textContent;
+
+// const displayInitContent = document.querySelector('.display').textContent;
 
 /* Handling the click event on a button */
 
@@ -40,16 +41,16 @@ const handleClick = () => {
         })
     }
 }
-
 handleClick();
 
 const handleClickClear = () => {
     let clerButton = document.querySelector('.btn__clear');
         clerButton.addEventListener('click', () => {
-            document.querySelector('.display').innerHTML = displayInitContent;
+            // document.querySelector('.display').innerHTML = displayInitContent;
+            document.querySelector('.display').textContent = '';
+
         })
 }
-
 handleClickClear();
 
 const handleClickEqual = () => {
@@ -57,11 +58,12 @@ const handleClickEqual = () => {
         equalButton.addEventListener('click', () => {
             inputString = document.querySelector('.display').textContent;
             console.log(inputString);
-            return inputString;
         })
+    
 }
-
 handleClickEqual();
+
+
 
 /*
 let inputNumber = []; 
