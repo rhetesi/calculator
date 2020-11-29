@@ -2,9 +2,9 @@
 
 /*
 Kell:
-Eseményfigyelő a normál és a műveleti gombokhoz
+KÉSZ Eseményfigyelő a normál és a műveleti gombokhoz
 - lenyomásukra értékük megjelenítése a kijelző mezőjében
-Eseményfigyelő a 'C' gombra
+KÉSZ Eseményfigyelő a 'C' gombra
 - lenyomására az kijelző input field tartalmának törlése
 Eseményfigyelő az 'egyenlő' gombra
 - lenyomására a kijelző input field kiolvasása
@@ -17,7 +17,7 @@ oS tömb 'i' eleme alapjám meghívjuk a műveleti függvényt
 az elvégzett művelet eredménye lesz az 'i' reduce hatására
 (valójában nem 'i', hanem 'result' tömb de most könnyebb így leírni itt)
 Ha elfogytak a tömbök elemei, akkor a  'result' tömb értékét kiírjuk a kijelzőre:
--- appendAdjecantHTML
+-- appendAdjacentHTML
 
 KÉSZ - Függvények
 sum(mmation) = a + b
@@ -27,20 +27,41 @@ div(ision) = a / b
 
 */
 
+let inputString = '';
+const displayInitContent = document.querySelector('.display').textContent;
 
-/* Handling the click event on a button
+/* Handling the click event on a button */
+
 const handleClick = () => {
-    let buttons = document.querySelectorAll('.button');
+    let buttons = document.querySelectorAll('.btn__opOrNum');
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', () => {
-            //console.log(buttons[i].value);
-            console.log(buttons[i].innerHTML);
+            document.querySelector('.display').insertAdjacentText('beforeend', buttons[i].textContent);
         })
     }
 }
 
 handleClick();
-*/
+
+const handleClickClear = () => {
+    let clerButton = document.querySelector('.btn__clear');
+        clerButton.addEventListener('click', () => {
+            document.querySelector('.display').innerHTML = displayInitContent;
+        })
+}
+
+handleClickClear();
+
+const handleClickEqual = () => {
+    let equalButton = document.querySelector('.btn__equal');
+        equalButton.addEventListener('click', () => {
+            inputString = document.querySelector('.display').textContent;
+            console.log(inputString);
+            return inputString;
+        })
+}
+
+handleClickEqual();
 
 /*
 let inputNumber = []; 
