@@ -61,10 +61,12 @@ const handleClickEqual = () => {
             console.log(inputString);
             //console.log(summation(15, 27)); // OK - külső függvénynek kell átadni paraméterként a stringet
             // s majd annak a return-je visszaküldi, hogy kiíassuk
-            const sum = summation(15, 27);
-            console.log(sum);
-            const resultContent = inputString + sum;
-            console.log(resultContent);
+            const sum = summation(15, 27); // Itt kell meghívni a számolásért felelős függvényt
+            // aminek a visszatérési értéke lesz a sum, azaz valójában átnevezve resultContent!
+            
+            const resultContent = inputString + sum; // Ha az elú sum maga a resultContent,
+            // akkor ez itt nem is kell.
+            
             display.textContent = '';
             display.insertAdjacentText('beforeend', resultContent);
         })
@@ -101,10 +103,6 @@ const operatorsArray = (inputArray) => {
 }
 */
 
-const testString = '-36+25-45';
-let a = parseFloat(testString);
-console.log(a, a.length);
-
 
 
 /* Ezt kell átdolgozni a számokat és műveleti jeleket tartalamzó tömbökkel elvégzendő műveletekhez!!!
@@ -126,7 +124,9 @@ VALAMI ilyen kellene:
 
 const result = numbers.reduce(prev, curr) => operations tömb aktuális eleme szerinti műveli függvény
 meghívása prev és curr paraméterek átadásával, operations tömb index-ének növelése eggyel.
-* /
+*/
+
+
 
 /* Mathematical functions */
 const summation = (a = 0, b = 0) => a + b;
@@ -137,15 +137,46 @@ const multiply = (a = 1, b = 1) => a * b;
 
 const division = (a = 0, b = 1) => a / b;
 
-
-const b = 12;
+//const a = 37, b = 12;
 //console.log(summation(a, b));
 //console.log(subtraction(a, b));
 //console.log(multiply(a, b));
 //console.log(division(a, b));
 
 
-const testArray = [1, 2, 'alpha', 3, 15, 'beta', 4];
+/* const testArray = [1, 2, 'alpha', 3, 15, 'beta', 4];
 
 const numArray = (arr) => arr.map(item => typeof item === 'number');
-console.log(numArray(testArray));
+console.log(numArray(testArray)); */
+
+const testString = '2369+458-12*5/6';
+
+const testNumbersArray = [];
+const regExpNum = /\d+/g;
+const testOperatorsArray = [];
+const regExpOp = /\D/g;
+console.log(testString.match(regExpNum));
+console.log(testString.match(regExpOp));
+
+/*
+Milyen jó a regular expressions használata
+A '+' operátor pedig kifejezetten hasznos, így az egymás utániakat a következő szeparátorig egynek veszi!
+
+Súgó:
+
+0.) How to split string javascript keresés után rálelve a reguláris kifejezésekre:
+
+1.) Innen indultam:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+
+2.) Itt jött a '+' operátor használata:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
+
+Továbbiak:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+
+*/
