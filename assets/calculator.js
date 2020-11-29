@@ -28,6 +28,7 @@ div(ision) = a / b
 */
 
 let inputString = '';
+const display = document.querySelector('.display');
 
 // const displayInitContent = document.querySelector('.display').textContent;
 
@@ -58,10 +59,21 @@ const handleClickEqual = () => {
         equalButton.addEventListener('click', () => {
             inputString = document.querySelector('.display').textContent;
             console.log(inputString);
+            //console.log(summation(15, 27)); // OK - külső függvénynek kell átadni paraméterként a stringet
+            // s majd annak a return-je visszaküldi, hogy kiíassuk
+            const sum = summation(15, 27);
+            console.log(sum);
+            const resultContent = inputString + sum;
+            console.log(resultContent);
+            display.textContent = '';
+            display.insertAdjacentText('beforeend', resultContent);
         })
     
 }
 handleClickEqual();
+
+
+// String szétszedése tömbökre
 
 
 
@@ -127,10 +139,10 @@ const division = (a = 0, b = 1) => a / b;
 
 
 const b = 12;
-console.log(summation(a, b));
-console.log(subtraction(a, b));
-console.log(multiply(a, b));
-console.log(division(a, b));
+//console.log(summation(a, b));
+//console.log(subtraction(a, b));
+//console.log(multiply(a, b));
+//console.log(division(a, b));
 
 
 const testArray = [1, 2, 'alpha', 3, 15, 'beta', 4];
